@@ -16,7 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('posts.urls'))
-]
+    # импорт правил из приложения posts
+    path('', include('posts.urls', namespace='posts')),
+    path('admin/', admin.site.urls)
+] 
