@@ -21,11 +21,13 @@
     <header>
       {% include 'includes/header.html' %}    
     </header>
-    <main>
+    <div class="container">
+      <main>
       {% block content %}
       Контента нет..
       {% endblock %}
-    </main>
+      </main>
+    </div>
     <footer>
       {% include 'includes/footer.html' %}
     </footer>
